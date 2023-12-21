@@ -17,7 +17,7 @@ files = ["input_0", "input_1"]
 for file in files:
     im = cv2.imread(file+".png")
     img = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-    cv2.imwrite(file+"pgm",img)
+    cv2.imwrite(file+".pgm",img)
 
 p = subprocess.run(['two_photos_psf_estim', '-s', str(args.s), '-k', str(args.k), '-t', str(args.t),
                     '-d', 'ipol',
